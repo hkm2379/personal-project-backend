@@ -13,7 +13,6 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
     private String email;
 
     @Getter
@@ -21,8 +20,6 @@ public class Account {
 
     @OneToOne(mappedBy = "account", fetch = FetchType.LAZY)
     private AccountRole accountRole;
-
-    private String address;
 
     public Account(String email, String password) {
         this.email = email;
